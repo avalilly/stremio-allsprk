@@ -70,7 +70,7 @@ const channels = thumbnails.map((thumbnail, i) => {
   }
 })
 
-const { addonBuilder, serveHTTP, publishToCentral }  = require('stremio-addon-sdk')
+const { addonBuilder }  = require('stremio-addon-sdk')
 
 const addon = new addonBuilder(manifest)
 
