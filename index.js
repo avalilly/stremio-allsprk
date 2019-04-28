@@ -116,7 +116,8 @@ function getEpg(obj) {
           'Referer': obj.streams[0].url
         }
       }
-      needle.get('https://stream.allsprk.tv/title.' + obj.id.replace('allsprk:chan-', '') + '.txt', opts, (err, resp, body) => {
+      const id = obj.id.replace('allsprk:chan-', '')
+      needle.get('https://stream.allsprk.tv/title' + (id != 1 ? '.' + id : '') + '.txt', opts, (err, resp, body) => {
         if (err)
             reject(err)
         else {
