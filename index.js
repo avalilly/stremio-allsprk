@@ -167,9 +167,6 @@ addon.defineStreamHandler(args => {
       }
     })
   })
-  return new Promise((resolve, reject) => {
-    resolve({ streams: [ { url: metas.toVideoUrl(args.id) } ] })
-  })
 })
 
 module.exports = addon.getInterface()
